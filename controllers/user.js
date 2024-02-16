@@ -1,4 +1,4 @@
-//const User = require('../models/user.js');
+// //const User = require('../models/user.js');
 const { readUsersFromFile, saveUsersToFile } = require('../config/database.js');
 const bcrypt =require('bcryptjs');
 const jwt = require('jsonwebtoken');
@@ -21,15 +21,12 @@ const register = async (req, res) => {
         }
 
         const passwordHash = await bcrypt.hash(password, 12);
-        users[email] = { username, usersurname, email, password: passwordHash };
+        users.push({ username, usersurname, email, password: passwordHash });
         saveUsersToFile(users);
-
-        const userToken = jwt.sign({ email }, process.env.SECRET_TOKEN, { expiresIn: '1h' });
 
         res.status(201).json({
             status: "OK",
             user: { username, usersurname, email, password},
-            token: userToken
         });
     } catch (error) {
         return res.status(500).json({ message: error.message });
