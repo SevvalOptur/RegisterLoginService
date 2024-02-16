@@ -10,5 +10,11 @@
     "usersurname": "optur",
     "email": "sevvaloptrr@gmail.com",
     "password": "$2a$12$ig49/6QXoSy4HPTbrgeh1Oi8PyE8xALzUkoSVZ9.wZDdr.kFaOoSy"
+  },
+  {
+    "username": "deneme",
+    "usersurname": "deneme",
+    "email": "deneme@gmail.com",
+    "password": "$2a$12$2AMY6iRotZyoSZm4YtkNf.wvosRRaCtxUuekLR7npFXhE6ZyJQQ5e"
   }
 ]
